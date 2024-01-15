@@ -1,0 +1,25 @@
+<ng-container *ngIf="product">
+  <h1>
+    Event: {{ product.title }}
+  </h1>
+  <p>
+    {{ product.description }}
+  </p>
+  <span>
+    <b>
+      PRICE:
+    </b>
+    <i>
+      {{ product.price }}
+    </i>
+  </span>
+  <br />
+  <span>
+    <b>
+      QTY:
+    </b>
+    <i>
+      {{ product.quantity }}
+    </i>
+  </span>
+</ng-container>

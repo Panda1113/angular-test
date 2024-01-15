@@ -1,0 +1,8 @@
+<ng-container [ngSwitch]="product?.type">
+    <div *ngSwitchCase="ProductType.EVENT">
+        <app-event-product [data]="product"></app-event-product>
+    </div>
+    <div *ngSwitchCase="ProductType.PHYSICAL">
+        <app-physical-product [data]="product"></app-physical-product>
+    </div>
+</ng-container>
