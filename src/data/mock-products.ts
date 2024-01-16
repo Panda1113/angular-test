@@ -30,11 +30,4 @@ export const PRODUCTS: Product[] = [
     price: 45.8,
     quantity: 12
   },
-  {
-    title: 'Physical 1',
-    type: ProductType.PHYSICAL,
-    description: 'Hi! This is our up-to-edge product with latest technology! Human will have enhanced power.',
-    price: 45.8,
-    quantity: 12
-  },
 ];

@@ -1,5 +1,21 @@
-<div class="products">
+<div>
+  <div class="toggle-product-list">
+    <button class="product-list" (click)="handleClickProductListButton()">Product List</button>
+    <div class="real-time-state" >
+      <div *ngFor="let sailProduc of sailProducts" style="margin-bottom: 20px;">
+        <div>{{sailProduc.sail_date}} Saild the {{sailProduc.title}} product</div>
+        <div *ngIf="sailProduc.type === ProductType.PHYSICAL">
+          <div>Current Quantity {{sailProduc.quantity}}</div>
+        </div>
+        <div *ngIf="sailProduc.type === ProductType.EVENT">
+          <div>Current Quantity 0</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="showProductList" class="products">
   <ng-container *ngFor="let product of products">
-    <app-product [product]="product"></app-product>
+    <app-product (responseToChild)="handleResponseToChild($event)" [product]="product"></app-product>
   </ng-container>
 </div>

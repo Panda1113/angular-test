@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { EventProduct } from '../data/event-product';
 import { PhysicalProduct } from '../data/physical-product';
 import { ProductType } from '../data/product-type.enum';
@@ -11,6 +11,7 @@ import { ProductType } from '../data/product-type.enum';
 export class ProductComponent implements OnInit {
   readonly ProductType = ProductType;
   @Input() product?: PhysicalProduct | EventProduct;
+  @Output() responseToChild = new EventEmitter();
   isSail : boolean = false;
   quantity : number = 1;
   constructor() {}
@@ -27,6 +28,7 @@ export class ProductComponent implements OnInit {
     if (this.product?.type === ProductType.PHYSICAL) {
       this.product.quantity = this.quantity
     }
+    this.responseToChild.emit(this.product);
   }
 
   sayAboutMe() {}

@@ -1,3 +1,8 @@
+.toggle-product-list{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
 .products {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -5,4 +10,25 @@
     border: 1px solid #ddd;
     padding: 50px;
     background-color: #ddd;
+}
+
+.product-list{
+    height: 50px;
+    min-width: 100px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 5px;
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+
+.real-time-state {
+    width: 500px; 
+    height: 100px; 
+    overflow-y: scroll; 
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    padding: 10px;
 }
