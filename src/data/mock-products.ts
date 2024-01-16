@@ -15,6 +15,26 @@ export const PRODUCTS: Product[] = [
     type: ProductType.PHYSICAL,
     description: 'Hi! This is our up-to-edge product with latest technology! Human will have enhanced power.',
     price: 20.4,
-    quantity: 5
+    quantity: 2
+  },
+  {
+    title: 'Event 1',
+    type: ProductType.EVENT,
+    description: 'Hello! we will open this event to improve our product to the microservice architecture',
+    due_date: new Date('2024-02-02')
+  },
+  {
+    title: 'Physical 1',
+    type: ProductType.PHYSICAL,
+    description: 'Hi! This is our up-to-edge product with latest technology! Human will have enhanced power.',
+    price: 45.8,
+    quantity: 12
+  },
+  {
+    title: 'Physical 1',
+    type: ProductType.PHYSICAL,
+    description: 'Hi! This is our up-to-edge product with latest technology! Human will have enhanced power.',
+    price: 45.8,
+    quantity: 12
   },
 ];

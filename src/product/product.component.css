@@ -1,0 +1,30 @@
+*{
+    box-sizing:  border-box;
+}
+.product{
+    background-color: #fff;
+    padding: 20px;
+    min-height: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px gray;
+    border: 1px solid #fff; 
+    position: relative;
+}
+
+.action{
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px;
+}
+
+.btn-buy{
+    height: 50px;
+    min-width: 100px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 5px;
+    background-color: deepskyblue;
+    cursor: pointer;
+}

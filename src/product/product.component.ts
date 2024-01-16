@@ -8,17 +8,26 @@ import { ProductType } from '../data/product-type.enum';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css'],
 })
-
 export class ProductComponent implements OnInit {
   readonly ProductType = ProductType;
-  @Input() data: any = [];
-  product?: PhysicalProduct | EventProduct;
-
-  constructor() { }
+  @Input() product?: PhysicalProduct | EventProduct;
+  isSail : boolean = false;
+  quantity : number = 1;
+  constructor() {}
 
   ngOnInit() {
-    this.product = this.data;
+    if (this.product?.type === ProductType.PHYSICAL) {
+      this.quantity = this.product.quantity;
+    }
   }
 
-  sayAboutMe() { }
+  handleClickBuyButton(){
+    --this.quantity
+    this.isSail = true
+    if (this.product?.type === ProductType.PHYSICAL) {
+      this.product.quantity = this.quantity
+    }
+  }
+
+  sayAboutMe() {}
 }

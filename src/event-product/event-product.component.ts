@@ -7,16 +7,12 @@ import { EventProduct } from '../data/event-product';
   styleUrls: ['./event-product.component.css']
 })
 export class EventProductComponent implements OnInit {
-  product?: EventProduct;
-  isSail : boolean = false;
-  @Input() data:any = []
-  constructor() {}
+  @Input() product?: EventProduct;
+
+  constructor() { }
 
   ngOnInit() {
-    this.product = this.data
+    console.log("event product", this.product)
   }
 
-  handleClick(){
-    this.isSail = true;
-  }
 }

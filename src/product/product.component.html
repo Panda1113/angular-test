@@ -1,8 +1,22 @@
-<ng-container [ngSwitch]="product?.type">
-    <div *ngSwitchCase="ProductType.EVENT">
-        <app-event-product [data]="product"></app-event-product>
+<div class="product">
+  <ng-container *ngIf="product">
+    <ng-container *ngIf="product.type === ProductType.EVENT">
+      <app-event-product [product]="product"></app-event-product>
+    </ng-container>
+    <ng-container *ngIf="product.type === ProductType.PHYSICAL">
+      <app-physical-product [product]="product"></app-physical-product>
+    </ng-container>
+    <div *ngIf="isSail">
+      <div *ngIf="quantity > 0 else Sail">
+        <h1 style="font-style: italic; color: green;">Sail</h1>
+        <h2>Current Quantity {{quantity}}</h2>
+      </div>
+      <ng-template #Sail>
+        <h1 style="font-style: italic; color: red;">Sail</h1>
+      </ng-template>
     </div>
-    <div *ngSwitchCase="ProductType.PHYSICAL">
-        <app-physical-product [data]="product"></app-physical-product>
+    <div class="action" *ngIf="quantity > 0">
+      <button class="btn-buy" (click)="handleClickBuyButton()">Buy!</button>
     </div>
-</ng-container>
+  </ng-container>
+</div>

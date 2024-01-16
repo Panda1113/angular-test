@@ -1,35 +1,15 @@
-<ng-container *ngIf="product" class="event-product">
-  <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-    <div style="position: relative; flex: 50%;">
-      <img src="../assets/detail.jpg" alt="Not Found" style="width:100%">
-      <h1 *ngIf="isSail" style="position: absolute; bottom: 10px; right: 30px; color: red; font-weight: 900; font-style: italic;">Sail</h1>
-    </div>
-    <div class="content" style="padding: 20px; flex: 50px;">
+<ng-container *ngIf="product">
+  <div class="product-image">
+    <img src="../assets/detail.jpg" alt="">
+  </div>
+  <div class="physical-content">
+    <div class="title">
       <h1>{{product.title}}</h1>
+    </div>
+    <div class="description">
       <p>{{product.description}}</p>
-      <p><b>Price:</b> {{product.price | currency}}</p>
+      <p><b>PRICE:</b> {{product.price | currency}}</p>
       <p><b>Quantity:</b> {{product.quantity}}</p>
-      <div style="display: flex; justify-content: flex-end;">
-        <button class="detail-btn" (click)="handleClick()">Buy!</button>
-      </div>
     </div>
   </div>
 </ng-container>
-<!-- <ng-container *ngIf="product">
-  <div class="container">
-    <div class="image">
-      <img src="../assets/detail.jpg" alt="Not Found" style="width: 50%;">
-    </div>
-  </div> -->
-  <!-- <div class="container">
-    <div class="main">
-      <h1>{{product.title}}</h1>
-      <p>{{product.description}}</p>
-      <button class="detail-btn" (click)="handleClick()">Detials</button>
-    </div>
-    d
-    <img src="../assets/detail.jpg" alt="Not Found" style="width: 200px; height: 150px;">
-    <div class="priceandquantity">
-    </div>
-  </div> -->
-<!-- </ng-container> -->

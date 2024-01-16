@@ -7,17 +7,9 @@ import { PhysicalProduct } from '../data/physical-product';
   styleUrls: ['./physical-product.component.css'],
 })
 export class PhysicalProductComponent implements OnInit {
-  @Input() data:any = [];
-  product?: PhysicalProduct;
-  isSail : boolean = false;
+  @Input() product?: PhysicalProduct;
 
   constructor() {}
 
-  ngOnInit() {
-    this.product = this.data;
-  }
-
-  handleClick(){
-   this.isSail = true;
-  }
+  ngOnInit() {}
 }

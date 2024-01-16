@@ -8,10 +8,6 @@ import { PRODUCTS } from '../data/mock-products';
 })
 export class AppComponent {
   title = 'angular-quiz';
-  showProductList : boolean = false;
-  products = PRODUCTS;
 
-  onShowProductList(){
-    this.showProductList = !this.showProductList;
-  }
+  products = PRODUCTS;
 }
