@@ -1,4 +1,7 @@
-<ng-container *ngFor="let product of products">
-  <app-product [data]="product">
-  </app-product>
-</ng-container>
+<button style="transform: translate(-50%); left: 50%; position: relative;" class="show-product-list" (click)="onShowProductList()">Product List</button>
+<div *ngIf="showProductList" style="display: grid; grid-template-columns: auto auto; gap:50px; padding: 20px;">
+  <ng-container *ngFor="let product of products">
+    <app-product [data]="product">
+    </app-product>
+  </ng-container>
+</div>

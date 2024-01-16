@@ -9,6 +9,7 @@ import { PhysicalProduct } from '../data/physical-product';
 export class PhysicalProductComponent implements OnInit {
   @Input() data:any = [];
   product?: PhysicalProduct;
+  isSail : boolean = false;
 
   constructor() {}
 
@@ -17,6 +18,6 @@ export class PhysicalProductComponent implements OnInit {
   }
 
   handleClick(){
-   this.data.title = this.data.title + "Sail";
+   this.isSail = true;
   }
 }

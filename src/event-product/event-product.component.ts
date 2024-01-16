@@ -8,14 +8,15 @@ import { EventProduct } from '../data/event-product';
 })
 export class EventProductComponent implements OnInit {
   product?: EventProduct;
+  isSail : boolean = false;
   @Input() data:any = []
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.product = this.data
   }
 
   handleClick(){
-    this.data.title = this.data.title + "Sail";
+    this.isSail = true;
   }
 }
