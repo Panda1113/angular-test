@@ -14,4 +14,8 @@ export class EventProductComponent implements OnInit {
   ngOnInit() {
     this.product = this.data
   }
+
+  handleClick(){
+    this.data.title = this.data.title + "Sail";
+  }
 }

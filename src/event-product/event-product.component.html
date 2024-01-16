@@ -1,13 +1,6 @@
-<ng-container *ngIf="product">
-  <h1>
-    Event: {{ product.title }}
-  </h1>
-  <p>
-    {{ product.description }}
-  </p>
-  <span>
-    <b>
-      {{ (product.due_date.getMonth() + 1) +'/'+ product.due_date.getDay() +'/'+ product.due_date.getFullYear() }}
-    </b>
-  </span>
+<ng-container *ngIf="product" class="event-product">
+  <h1>{{product.title}}</h1>
+  <p>{{product.description}}</p>
+  <p>{{ (product.due_date.getMonth() + 1) +'/'+ product.due_date.getDay() +'/'+ product.due_date.getFullYear() }}</p>
+  <button (click)="handleClick()">Button</button>
 </ng-container>
